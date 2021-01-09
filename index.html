@@ -1,0 +1,50 @@
+
+<!DOCTYPE html> 
+<html>
+    <head>
+        <script>
+            var cnt = 0;
+            function startVideo() {
+                cnt++;
+                switch(cnt) {
+                    case 1:
+                        var myvideo = document.getElementById("vid1");
+                        myvideo.src = 'https://www.w3schools.com/html/mov_bbb.mp4';
+                        myvideo.autoplay = true;
+                    break;
+                    case 2:
+                        var myvideo = document.getElementById("vid2");
+                        myvideo.src = 'https://d2qguwbxlx1sbt.cloudfront.net/TextInMotion-VideoSample-576p.mp4';
+                        myvideo.autoplay = true;
+                    break;
+                    case 3:
+                        var myvideo = document.getElementById("vid3");
+                        myvideo.src = 'https://d2qguwbxlx1sbt.cloudfront.net/ShatterText-Roboto2-Sample.mp4';
+                        myvideo.autoplay = true;
+                    break;
+                }
+                if(cnt < 3)
+                    setTimeout(startVideo, 3000);
+            }
+            setTimeout(startVideo, 3000);
+        </script>
+    </head>
+
+<body> 
+<p> version 3 </p>
+<video secondary id="vid0" width="400" muted autoplay loop>
+  <source src="https://file-examples-com.github.io/uploads/2017/04/file_example_MP4_480_1_5MG.mp4" type="video/mp4">
+</video>
+
+<video secondary id="vid1" width="400" loop muted autoplay type="video/mp4">
+</video>
+
+<video secondary id="vid2" width="400" loop muted autoplay type="video/mp4">
+</video>
+
+<video secondary id="vid3" width="400" loop muted autoplay type="video/mp4">
+</video>
+
+</body> 
+</html>
+
